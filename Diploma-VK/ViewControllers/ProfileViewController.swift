@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
 
         view.backgroundColor = .systemPink
         navigationController?.navigationBar.isHidden = false
-        
     }
 
 }
