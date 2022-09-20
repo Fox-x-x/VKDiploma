@@ -11,6 +11,7 @@
 		9371AF6627F6377E00385EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9371AF6527F6377E00385EBF /* GoogleService-Info.plist */; };
 		9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9C27F241F700416D3A /* ColorPalette.swift */; };
 		9374CD9F27F243C500416D3A /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */; };
+		9382B8F828DA4CFB00B39CC8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382B8F728DA4CFB00B39CC8 /* PostCell.swift */; };
 		9393221827F9C9CC000393B0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393221727F9C9CC000393B0 /* Errors.swift */; };
 		9393221A27F9C9FA000393B0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393221927F9C9FA000393B0 /* Alert.swift */; };
 		93A730C02804B7890022DCB4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A730BF2804B7890022DCB4 /* FeedViewController.swift */; };
@@ -33,6 +34,7 @@
 		9371AF6527F6377E00385EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9374CD9C27F241F700416D3A /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
+		9382B8F728DA4CFB00B39CC8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		9393221727F9C9CC000393B0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		9393221927F9C9FA000393B0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		93A730BF2804B7890022DCB4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 				9393221927F9C9FA000393B0 /* Alert.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9382B8F928DA4D0700B39CC8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9382B8F728DA4CFB00B39CC8 /* PostCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9393221627F9C6F1000393B0 /* Networking */ = {
@@ -139,6 +149,7 @@
 			children = (
 				93EC313927F0E20300EB2178 /* AppDelegate.swift */,
 				93B42C07280DF3AB005F6768 /* ViewControllers */,
+				9382B8F928DA4D0700B39CC8 /* Cells */,
 				93B42C00280DED88005F6768 /* Coordinators */,
 				9393221627F9C6F1000393B0 /* Networking */,
 				9374CDA027F243DE00416D3A /* Helpers */,
@@ -289,6 +300,7 @@
 				93B42C06280DF38C005F6768 /* FavoritesViewController.swift in Sources */,
 				93E9A30B2811EE4200F9A6C4 /* FavoritesCoordinator.swift in Sources */,
 				93B42BFF280DED7D005F6768 /* Coordinator.swift in Sources */,
+				9382B8F828DA4CFB00B39CC8 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

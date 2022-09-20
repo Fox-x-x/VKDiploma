@@ -14,17 +14,48 @@ class FeedViewController: UIViewController {
     
 //    weak var coordinator: MainCoordinator?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+    private lazy var postsTable: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(PostCell.self, forCellReuseIdentifier: String(describing: PostCell.self))
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.backgroundColor = .systemRed
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemMint
+        view.backgroundColor = ColorPalette.primaryColor
         navigationController?.navigationBar.isHidden = false
         
+        setupLayout()
+        
+    }
+    
+    private func setupLayout() {
+        view.addSubview(postsTable)
+        postsTable.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
+}
+
+extension FeedViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostCell.self), for: indexPath) as? PostCell {
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+}
+
+extension FeedViewController: UITableViewDelegate {
+    
 }
