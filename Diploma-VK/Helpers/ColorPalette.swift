@@ -11,6 +11,10 @@ import Hex
 struct ColorPalette {
     static let primaryColor = UIColor(hex: "#ffffff")
     static let secondaryColor = UIColor(hex: "#F5F3EE")
+    static let thirdColor = UIColor(hex: "#263238")
+    static let fourthColor = UIColor(hex: "#7E8183")
+//    static let fivethColor = UIColor(hex: "#F5F3EE")
+    
 //    static let thirdColorLight = UIColor.systemGray6
 //    static let thirdColorDark = UIColor.systemGray6
 //    static let fourthColorLight = UIColor.black
