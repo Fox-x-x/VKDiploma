@@ -42,7 +42,8 @@ class FeedViewController: UIViewController {
     private lazy var postsTable: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(PostCell.self, forCellReuseIdentifier: String(describing: PostCell.self))
-        tableView.register(PostsTableHeaderView.self, forHeaderFooterViewReuseIdentifier: String(describing: PostsTableHeaderView.self))
+        tableView.register(PostsTableHeaderView.self,
+                           forHeaderFooterViewReuseIdentifier: String(describing: PostsTableHeaderView.self))
         tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,7 +67,7 @@ class FeedViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
 
@@ -80,6 +81,11 @@ extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostCell.self), for: indexPath) as? PostCell {
             cell.postData = posts[indexPath.row]
+            
+            cell.onMoreButtonTap = { [weak self] in
+                self?.navigationController?.pushViewController(PostViewController(), animated: true)
+            }
+            
             return cell
         } else {
             return UITableViewCell()

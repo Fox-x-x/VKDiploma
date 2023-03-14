@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1BE4F9FFFA4421F0CA7A12C9 /* Pods_Diploma_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336F4163DB0AB165557E004C /* Pods_Diploma_VK.framework */; };
+		930F627E29BF99CC001F74AC /* PostControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930F627D29BF99CC001F74AC /* PostControlPanel.swift */; };
+		9310E83429BD092E00D28604 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310E83329BD092E00D28604 /* PostViewController.swift */; };
+		9322F4DD2919A1FB002AAACF /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */; };
+		93400B1D29A12B0B0027C442 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */; };
 		9371AF6627F6377E00385EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9371AF6527F6377E00385EBF /* GoogleService-Info.plist */; };
 		9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9C27F241F700416D3A /* ColorPalette.swift */; };
 		9374CD9F27F243C500416D3A /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */; };
+		9381BCB129BA65AC00087947 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9381BCB029BA65AC00087947 /* RadioButton.swift */; };
 		9382B8F828DA4CFB00B39CC8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9382B8F728DA4CFB00B39CC8 /* PostCell.swift */; };
+		9388666929B3C94B00433494 /* PhotoGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388666829B3C94B00433494 /* PhotoGalleryCell.swift */; };
 		9393221827F9C9CC000393B0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393221727F9C9CC000393B0 /* Errors.swift */; };
 		9393221A27F9C9FA000393B0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393221927F9C9FA000393B0 /* Alert.swift */; };
 		9396F97228EA1CC0006D00AD /* PostsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */; };
@@ -20,7 +26,11 @@
 		93B42C02280DEDB9005F6768 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B42C01280DEDB9005F6768 /* MainCoordinator.swift */; };
 		93B42C04280DF343005F6768 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B42C03280DF343005F6768 /* ProfileViewController.swift */; };
 		93B42C06280DF38C005F6768 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B42C05280DF38C005F6768 /* FavoritesViewController.swift */; };
+		93BF269B29AE8B8300710267 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BF269A29AE8B8300710267 /* PhotoGalleryViewController.swift */; };
 		93C79CA528F5EA0400DC63D2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C79CA428F5EA0400DC63D2 /* Post.swift */; };
+		93CE88F029B4DD98007A508A /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */; };
+		93CE88F229B4DF3E007A508A /* NavigationTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE88F129B4DF3E007A508A /* NavigationTopPanelView.swift */; };
+		93D0F0A12990078C004284C9 /* FollowerProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */; };
 		93E9A3032811E59C00F9A6C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3022811E59C00F9A6C4 /* AppCoordinator.swift */; };
 		93E9A3052811E60D00F9A6C4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3042811E60D00F9A6C4 /* FlowCoordinator.swift */; };
 		93E9A3072811EC0C00F9A6C4 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3062811EC0C00F9A6C4 /* FeedCoordinator.swift */; };
@@ -34,10 +44,16 @@
 
 /* Begin PBXFileReference section */
 		336F4163DB0AB165557E004C /* Pods_Diploma_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diploma_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930F627D29BF99CC001F74AC /* PostControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostControlPanel.swift; sourceTree = "<group>"; };
+		9310E83329BD092E00D28604 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		9371AF6527F6377E00385EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9374CD9C27F241F700416D3A /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
+		9381BCB029BA65AC00087947 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		9382B8F728DA4CFB00B39CC8 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9388666829B3C94B00433494 /* PhotoGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCell.swift; sourceTree = "<group>"; };
 		9393221727F9C9CC000393B0 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		9393221927F9C9FA000393B0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableHeaderView.swift; sourceTree = "<group>"; };
@@ -46,7 +62,11 @@
 		93B42C01280DEDB9005F6768 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		93B42C03280DF343005F6768 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		93B42C05280DF38C005F6768 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		93BF269A29AE8B8300710267 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		93C79CA428F5EA0400DC63D2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		93CE88F129B4DF3E007A508A /* NavigationTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTopPanelView.swift; sourceTree = "<group>"; };
+		93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerProfileHeaderView.swift; sourceTree = "<group>"; };
 		93E9A3022811E59C00F9A6C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		93E9A3042811E60D00F9A6C4 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		93E9A3062811EC0C00F9A6C4 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
@@ -90,6 +110,7 @@
 				9374CD9C27F241F700416D3A /* ColorPalette.swift */,
 				9393221727F9C9CC000393B0 /* Errors.swift */,
 				9393221927F9C9FA000393B0 /* Alert.swift */,
+				9381BCB029BA65AC00087947 /* RadioButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -98,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				9382B8F728DA4CFB00B39CC8 /* PostCell.swift */,
+				93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */,
+				9388666829B3C94B00433494 /* PhotoGalleryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -113,6 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */,
+				930F627D29BF99CC001F74AC /* PostControlPanel.swift */,
+				9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */,
+				93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */,
+				93CE88F129B4DF3E007A508A /* NavigationTopPanelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,7 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				93A730BF2804B7890022DCB4 /* FeedViewController.swift */,
+				9310E83329BD092E00D28604 /* PostViewController.swift */,
 				93B42C03280DF343005F6768 /* ProfileViewController.swift */,
+				93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */,
+				93BF269A29AE8B8300710267 /* PhotoGalleryViewController.swift */,
 				93B42C05280DF38C005F6768 /* FavoritesViewController.swift */,
 			);
 			path = ViewControllers;
@@ -311,20 +341,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				9396F97228EA1CC0006D00AD /* PostsTableHeaderView.swift in Sources */,
+				93D0F0A12990078C004284C9 /* FollowerProfileHeaderView.swift in Sources */,
+				93BF269B29AE8B8300710267 /* PhotoGalleryViewController.swift in Sources */,
 				9374CD9F27F243C500416D3A /* UIImage+Alpha.swift in Sources */,
 				93A730C02804B7890022DCB4 /* FeedViewController.swift in Sources */,
 				93E9A3032811E59C00F9A6C4 /* AppCoordinator.swift in Sources */,
 				93B42C02280DEDB9005F6768 /* MainCoordinator.swift in Sources */,
 				93EC313A27F0E20300EB2178 /* AppDelegate.swift in Sources */,
 				93F40D7428EB717600DA1ACC /* PaddingLabel.swift in Sources */,
+				9381BCB129BA65AC00087947 /* RadioButton.swift in Sources */,
+				9322F4DD2919A1FB002AAACF /* ProfileHeaderView.swift in Sources */,
 				93B42C04280DF343005F6768 /* ProfileViewController.swift in Sources */,
 				93E9A3092811ED8C00F9A6C4 /* ProfileCoordinator.swift in Sources */,
 				93E9A3052811E60D00F9A6C4 /* FlowCoordinator.swift in Sources */,
 				9393221827F9C9CC000393B0 /* Errors.swift in Sources */,
 				93E9A3072811EC0C00F9A6C4 /* FeedCoordinator.swift in Sources */,
+				9310E83429BD092E00D28604 /* PostViewController.swift in Sources */,
+				93400B1D29A12B0B0027C442 /* PhotosTableViewCell.swift in Sources */,
 				9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */,
+				9388666929B3C94B00433494 /* PhotoGalleryCell.swift in Sources */,
+				930F627E29BF99CC001F74AC /* PostControlPanel.swift in Sources */,
+				93CE88F029B4DD98007A508A /* EditInfoViewController.swift in Sources */,
 				9393221A27F9C9FA000393B0 /* Alert.swift in Sources */,
 				93B42C06280DF38C005F6768 /* FavoritesViewController.swift in Sources */,
+				93CE88F229B4DF3E007A508A /* NavigationTopPanelView.swift in Sources */,
 				93E9A30B2811EE4200F9A6C4 /* FavoritesCoordinator.swift in Sources */,
 				93C79CA528F5EA0400DC63D2 /* Post.swift in Sources */,
 				93B42BFF280DED7D005F6768 /* Coordinator.swift in Sources */,
@@ -474,7 +514,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -505,7 +545,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

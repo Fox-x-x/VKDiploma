@@ -10,6 +10,8 @@ import SnapKit
 
 class PostCell: UITableViewCell {
     
+    var onMoreButtonTap: (() -> Void)?
+    
     var postData: Post? {
         didSet {
             guard let postData else { return }
@@ -96,47 +98,12 @@ class PostCell: UITableViewCell {
         return view
     }()
     
-    private var likeImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.image = UIImage(systemName: "heart")
-        image.tintColor = ColorPalette.thirdColor
-        return image
-    }()
-    
-    private var likesCountLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 1
-        label.textColor = ColorPalette.thirdColor
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.text = "42"
-        return label
-    }()
-    
-    private var commentsImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.image = UIImage(systemName: "bubble.left")
-        image.tintColor = ColorPalette.thirdColor
-        return image
-    }()
-    
-    private var commentsCountLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 1
-        label.textColor = ColorPalette.thirdColor
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.text = "39"
-        return label
-    }()
-    
-    private var bookmarkImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.image = UIImage(systemName: "bookmark")
-        image.tintColor = ColorPalette.thirdColor
-        return image
-    }()
+    let bottomControlPanel = PostControlPanel(
+        likesCount: 42,
+        commentsCount: 39,
+        isBookmarked: false,
+        leadingOffset: 57
+    )
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -149,12 +116,7 @@ class PostCell: UITableViewCell {
     }
     
     @objc private func moreButtonTap() {
-        print("moreButton tap")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-//        avatarView.layer.cornerRadius = avatarView.frame.width / 2
+        onMoreButtonTap?()
     }
     
     private func setupLayout() {
@@ -225,46 +187,12 @@ class PostCell: UITableViewCell {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalTo(0.5)
-//            make.bottom.lessThanOrEqualToSuperview().offset(-50)
         }
         
-        postContentView.addSubview(likeImage)
-        likeImage.snp.makeConstraints { make in
-            make.top.equalTo(horizontalSeparator.snp.bottom).offset(8)
-            make.leading.equalTo(postImage.snp.leading)
-            make.width.equalTo(25)
-            make.height.equalTo(25)
-            make.bottom.equalToSuperview().offset(-16)
-        }
-        
-        postContentView.addSubview(likesCountLabel)
-        likesCountLabel.snp.makeConstraints { make in
-            make.leading.equalTo(likeImage.snp.trailing).offset(8)
-            make.centerY.equalTo(likeImage.snp.centerY)
-        }
-        
-        postContentView.addSubview(commentsImage)
-        commentsImage.snp.makeConstraints { make in
-            make.top.equalTo(horizontalSeparator.snp.bottom).offset(8)
-            make.leading.equalTo(likesCountLabel.snp.trailing).offset(32)
-            make.width.equalTo(25)
-            make.height.equalTo(25)
-            make.bottom.equalToSuperview().offset(-16)
-        }
-        
-        postContentView.addSubview(commentsCountLabel)
-        commentsCountLabel.snp.makeConstraints { make in
-            make.leading.equalTo(commentsImage.snp.trailing).offset(8)
-            make.centerY.equalTo(commentsImage.snp.centerY)
-        }
-        
-        postContentView.addSubview(bookmarkImage)
-        bookmarkImage.snp.makeConstraints { make in
-            make.top.equalTo(horizontalSeparator.snp.bottom).offset(8)
-            make.trailing.equalTo(postImage.snp.trailing)
-            make.width.equalTo(20)
-            make.height.equalTo(20)
-            make.bottom.equalToSuperview().offset(-21)
+        postContentView.addSubview(bottomControlPanel)
+        bottomControlPanel.snp.makeConstraints { make in
+            make.top.equalTo(horizontalSeparator.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
         }
         
     }
