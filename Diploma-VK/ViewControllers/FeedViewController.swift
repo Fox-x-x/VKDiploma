@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hex
 import SkeletonView
 import SnapKit
 

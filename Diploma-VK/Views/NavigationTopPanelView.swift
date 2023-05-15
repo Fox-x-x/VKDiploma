@@ -21,7 +21,7 @@ class NavigationTopPanelView: UIView {
     var onLeftButtonTap: (() -> Void)?
     var onRightButtonTap: (() -> Void)?
     
-    private let leftButton: UIButton = {
+    private lazy var leftButton: UIButton = {
         let button = UIButton()
         button.tintColor = ColorPalette.fifthColor
         button.addTarget(self, action: #selector(leftButtonDidTap), for: .touchUpInside)
@@ -35,7 +35,7 @@ class NavigationTopPanelView: UIView {
         return label
     }()
     
-    private let rightButton: UIButton = {
+    private lazy var rightButton: UIButton = {
         let button = UIButton()
         button.tintColor = ColorPalette.fifthColor
         button.addTarget(self, action: #selector(rightButtonDidTap), for: .touchUpInside)

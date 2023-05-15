@@ -10,6 +10,11 @@ import SnapKit
 
 class PostViewController: UIViewController {
     
+    private var commentBarNoKeyboardBottomConstraint: Constraint?
+    private var commentBarWithKeyboardBottomConstraint: Constraint?
+    
+    private var keyboardHeight: CGFloat = 0
+    
     private let randomText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     
     // MARK: - navigation top view
@@ -32,7 +37,7 @@ class PostViewController: UIViewController {
         return view
     }()
     
-    private let refreshControl: UIRefreshControl = {
+    private lazy var refreshControl: UIRefreshControl = {
         let rc = UIRefreshControl()
         rc.addTarget(self, action: #selector(onRefreshStart), for: .valueChanged)
         return rc
@@ -104,11 +109,9 @@ class PostViewController: UIViewController {
         return label
     }()
     
-    
-    
-    private let postCommentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemOrange
+    private let postCommentBar: PostCommentBar = {
+        let view = PostCommentBar()
+//        view.backgroundColor = ColorPalette.secondaryColor
         return view
     }()
     
@@ -120,9 +123,20 @@ class PostViewController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
+        view.addGestureRecognizer(gestureRecognizer)
+        
         topNavigationView.onLeftButtonTap = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
+        
+        postCommentBar.onSendButtonTap = {
+            print("onSendButtonTap")
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         setupLayout()
     }
@@ -136,10 +150,12 @@ class PostViewController: UIViewController {
         }
         
         view.addSubview(scrollView)
+        view.addSubview(postCommentBar)
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(topNavigationView.snp.bottom)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-44)
+//            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-44)
+            make.bottom.equalTo(postCommentBar.snp.top)
         }
 
         scrollView.addSubview(contentView)
@@ -204,14 +220,22 @@ class PostViewController: UIViewController {
             make.top.equalTo(horizontalSeparator).offset(16)
             make.leading.equalTo(postText.snp.leading)
             make.trailing.equalTo(postText.snp.trailing)
-            make.bottom.lessThanOrEqualToSuperview()
+            make.bottom.lessThanOrEqualToSuperview().offset(-200)
         }
         
-        view.addSubview(postCommentView)
-        postCommentView.snp.makeConstraints { make in
+//        view.addSubview(postCommentBar)
+        postCommentBar.snp.makeConstraints { make in
             make.top.equalTo(scrollView.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            
+            commentBarNoKeyboardBottomConstraint = make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).constraint
+            
+            commentBarWithKeyboardBottomConstraint = make.bottom.equalTo(view.snp.bottom).offset(-keyboardHeight).constraint
+            
+//            make.height.equalTo(44)
         }
+        commentBarNoKeyboardBottomConstraint?.activate()
+        commentBarWithKeyboardBottomConstraint?.deactivate()
         
         
     }
@@ -222,15 +246,37 @@ class PostViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func viewDidTap() {
+        postCommentBar.textView.endEditing(true)
     }
-    */
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            keyboardHeight = keyboardSize.height
+            
+            UIView.animate(withDuration: 0.3) {
+                self.postCommentBar.snp.makeConstraints { make in
+                    self.commentBarWithKeyboardBottomConstraint = make.bottom.equalTo(self.view.snp.bottom).offset(-self.keyboardHeight).constraint
+                }
+                
+                self.commentBarNoKeyboardBottomConstraint?.deactivate()
+                self.commentBarWithKeyboardBottomConstraint?.activate()
+                self.postCommentBar.layoutIfNeeded()
+                self.view.layoutIfNeeded()
+            }
+            
+        }
+        
+    }
+    
+    @objc private func keyboardWillHide() {
+        UIView.animate(withDuration: 0.3) {
+            self.commentBarWithKeyboardBottomConstraint?.deactivate()
+            self.commentBarNoKeyboardBottomConstraint?.activate()
+            self.postCommentBar.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+        }
+    }
 
 }

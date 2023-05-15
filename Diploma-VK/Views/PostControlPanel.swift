@@ -37,7 +37,7 @@ class PostControlPanel: UIView {
         return config
     }()
     
-    private var likeButton: UIButton = {
+    private lazy var likeButton: UIButton = {
         let button = UIButton()
         button.tintColor = ColorPalette.thirdColor
         button.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
@@ -53,7 +53,7 @@ class PostControlPanel: UIView {
         return label
     }()
     
-    private var commentsButton: UIButton = {
+    private lazy var commentsButton: UIButton = {
         let button = UIButton()
         button.tintColor = ColorPalette.thirdColor
         button.addTarget(self, action: #selector(commentsButtonTapped), for: .touchUpInside)
@@ -69,7 +69,7 @@ class PostControlPanel: UIView {
         return label
     }()
     
-    private var bookmarkButton: UIButton = {
+    private lazy var bookmarkButton: UIButton = {
         let button = UIButton()
         button.tintColor = ColorPalette.thirdColor
         button.addTarget(self, action: #selector(bookmarkButtonTapped), for: .touchUpInside)

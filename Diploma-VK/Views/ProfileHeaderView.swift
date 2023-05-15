@@ -54,7 +54,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         return label
     }()
     
-    private let editButton: UIButton = {
+    private lazy var editButton: UIButton = {
         let button = UIButton()
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         button.setTitle("Редактировать", for: .normal)

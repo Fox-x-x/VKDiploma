@@ -31,6 +31,7 @@
 		93CE88F029B4DD98007A508A /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */; };
 		93CE88F229B4DF3E007A508A /* NavigationTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CE88F129B4DF3E007A508A /* NavigationTopPanelView.swift */; };
 		93D0F0A12990078C004284C9 /* FollowerProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */; };
+		93DC2FAA29C27000007BF111 /* PostCommentBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DC2FA929C27000007BF111 /* PostCommentBar.swift */; };
 		93E9A3032811E59C00F9A6C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3022811E59C00F9A6C4 /* AppCoordinator.swift */; };
 		93E9A3052811E60D00F9A6C4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3042811E60D00F9A6C4 /* FlowCoordinator.swift */; };
 		93E9A3072811EC0C00F9A6C4 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E9A3062811EC0C00F9A6C4 /* FeedCoordinator.swift */; };
@@ -67,6 +68,7 @@
 		93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		93CE88F129B4DF3E007A508A /* NavigationTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTopPanelView.swift; sourceTree = "<group>"; };
 		93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerProfileHeaderView.swift; sourceTree = "<group>"; };
+		93DC2FA929C27000007BF111 /* PostCommentBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentBar.swift; sourceTree = "<group>"; };
 		93E9A3022811E59C00F9A6C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		93E9A3042811E60D00F9A6C4 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		93E9A3062811EC0C00F9A6C4 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */,
+				93DC2FA929C27000007BF111 /* PostCommentBar.swift */,
 				930F627D29BF99CC001F74AC /* PostControlPanel.swift */,
 				9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */,
 				93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */,
@@ -361,6 +364,7 @@
 				9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */,
 				9388666929B3C94B00433494 /* PhotoGalleryCell.swift in Sources */,
 				930F627E29BF99CC001F74AC /* PostControlPanel.swift in Sources */,
+				93DC2FAA29C27000007BF111 /* PostCommentBar.swift in Sources */,
 				93CE88F029B4DD98007A508A /* EditInfoViewController.swift in Sources */,
 				9393221A27F9C9FA000393B0 /* Alert.swift in Sources */,
 				93B42C06280DF38C005F6768 /* FavoritesViewController.swift in Sources */,
