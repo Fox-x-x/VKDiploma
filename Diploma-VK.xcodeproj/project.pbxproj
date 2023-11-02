@@ -12,7 +12,6 @@
 		9310E83429BD092E00D28604 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9310E83329BD092E00D28604 /* PostViewController.swift */; };
 		9322F4DD2919A1FB002AAACF /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */; };
 		93400B1D29A12B0B0027C442 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */; };
-		9371AF6627F6377E00385EBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9371AF6527F6377E00385EBF /* GoogleService-Info.plist */; };
 		9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9C27F241F700416D3A /* ColorPalette.swift */; };
 		9374CD9F27F243C500416D3A /* UIImage+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */; };
 		9381BCB129BA65AC00087947 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9381BCB029BA65AC00087947 /* RadioButton.swift */; };
@@ -41,6 +40,11 @@
 		93EC314327F0E20500EB2178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EC314227F0E20500EB2178 /* Assets.xcassets */; };
 		93EC314627F0E20500EB2178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93EC314427F0E20500EB2178 /* LaunchScreen.storyboard */; };
 		93F40D7428EB717600DA1ACC /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F40D7328EB717600DA1ACC /* PaddingLabel.swift */; };
+		CB173FD72A2691AA0098AD3A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB173FD62A2691AA0098AD3A /* CommentCell.swift */; };
+		CB1F86A72ACCABB700399502 /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F86A62ACCABB700399502 /* CommentsListView.swift */; };
+		CB2C63362A292CDC00F618E6 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */; };
+		CB6BBDA82ACF522500981B16 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BBDA72ACF522500981B16 /* PostComment.swift */; };
+		CBCBFF9C2AB785F900D1869E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBFF9B2AB785F900D1869E /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +53,6 @@
 		9310E83329BD092E00D28604 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
-		9371AF6527F6377E00385EBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9374CD9C27F241F700416D3A /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Alpha.swift"; sourceTree = "<group>"; };
 		9381BCB029BA65AC00087947 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
@@ -82,6 +85,11 @@
 		93F40D7328EB717600DA1ACC /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		9B1C96A201EFCCC2E2983E9F /* Pods-Diploma-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diploma-VK.release.xcconfig"; path = "Target Support Files/Pods-Diploma-VK/Pods-Diploma-VK.release.xcconfig"; sourceTree = "<group>"; };
 		C82A6EE4149CCC42E0CFB3B4 /* Pods-Diploma-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diploma-VK.debug.xcconfig"; path = "Target Support Files/Pods-Diploma-VK/Pods-Diploma-VK.debug.xcconfig"; sourceTree = "<group>"; };
+		CB173FD62A2691AA0098AD3A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		CB1F86A62ACCABB700399502 /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
+		CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		CB6BBDA72ACF522500981B16 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		CBCBFF9B2AB785F900D1869E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				9374CD9E27F243C500416D3A /* UIImage+Alpha.swift */,
+				CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */,
 				93F40D7328EB717600DA1ACC /* PaddingLabel.swift */,
 				9374CD9C27F241F700416D3A /* ColorPalette.swift */,
 				9393221727F9C9CC000393B0 /* Errors.swift */,
@@ -121,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9382B8F728DA4CFB00B39CC8 /* PostCell.swift */,
+				CB173FD62A2691AA0098AD3A /* CommentCell.swift */,
 				93400B1C29A12B0B0027C442 /* PhotosTableViewCell.swift */,
 				9388666829B3C94B00433494 /* PhotoGalleryCell.swift */,
 			);
@@ -137,8 +147,9 @@
 		9396F97328EA1DED006D00AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */,
+				CB1F86A52ACCA48C00399502 /* Comments-section */,
 				93DC2FA929C27000007BF111 /* PostCommentBar.swift */,
+				9396F97128EA1CC0006D00AD /* PostsTableHeaderView.swift */,
 				930F627D29BF99CC001F74AC /* PostControlPanel.swift */,
 				9322F4DC2919A1FB002AAACF /* ProfileHeaderView.swift */,
 				93D0F0A02990078C004284C9 /* FollowerProfileHeaderView.swift */,
@@ -213,7 +224,6 @@
 				9374CDA027F243DE00416D3A /* Helpers */,
 				93EC314227F0E20500EB2178 /* Assets.xcassets */,
 				93EC314427F0E20500EB2178 /* LaunchScreen.storyboard */,
-				9371AF6527F6377E00385EBF /* GoogleService-Info.plist */,
 				93EC314727F0E20500EB2178 /* Info.plist */,
 			);
 			path = "Diploma-VK";
@@ -226,6 +236,16 @@
 				9B1C96A201EFCCC2E2983E9F /* Pods-Diploma-VK.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB1F86A52ACCA48C00399502 /* Comments-section */ = {
+			isa = PBXGroup;
+			children = (
+				CBCBFF9B2AB785F900D1869E /* CommentView.swift */,
+				CB6BBDA72ACF522500981B16 /* PostComment.swift */,
+				CB1F86A62ACCABB700399502 /* CommentsListView.swift */,
+			);
+			path = "Comments-section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +310,6 @@
 			files = (
 				93EC314627F0E20500EB2178 /* LaunchScreen.storyboard in Resources */,
 				93EC314327F0E20500EB2178 /* Assets.xcassets in Resources */,
-				9371AF6627F6377E00385EBF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,12 +362,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1F86A72ACCABB700399502 /* CommentsListView.swift in Sources */,
 				9396F97228EA1CC0006D00AD /* PostsTableHeaderView.swift in Sources */,
 				93D0F0A12990078C004284C9 /* FollowerProfileHeaderView.swift in Sources */,
 				93BF269B29AE8B8300710267 /* PhotoGalleryViewController.swift in Sources */,
 				9374CD9F27F243C500416D3A /* UIImage+Alpha.swift in Sources */,
 				93A730C02804B7890022DCB4 /* FeedViewController.swift in Sources */,
 				93E9A3032811E59C00F9A6C4 /* AppCoordinator.swift in Sources */,
+				CB6BBDA82ACF522500981B16 /* PostComment.swift in Sources */,
 				93B42C02280DEDB9005F6768 /* MainCoordinator.swift in Sources */,
 				93EC313A27F0E20300EB2178 /* AppDelegate.swift in Sources */,
 				93F40D7428EB717600DA1ACC /* PaddingLabel.swift in Sources */,
@@ -360,6 +381,7 @@
 				9393221827F9C9CC000393B0 /* Errors.swift in Sources */,
 				93E9A3072811EC0C00F9A6C4 /* FeedCoordinator.swift in Sources */,
 				9310E83429BD092E00D28604 /* PostViewController.swift in Sources */,
+				CBCBFF9C2AB785F900D1869E /* CommentView.swift in Sources */,
 				93400B1D29A12B0B0027C442 /* PhotosTableViewCell.swift in Sources */,
 				9374CD9D27F241F700416D3A /* ColorPalette.swift in Sources */,
 				9388666929B3C94B00433494 /* PhotoGalleryCell.swift in Sources */,
@@ -371,8 +393,10 @@
 				93CE88F229B4DF3E007A508A /* NavigationTopPanelView.swift in Sources */,
 				93E9A30B2811EE4200F9A6C4 /* FavoritesCoordinator.swift in Sources */,
 				93C79CA528F5EA0400DC63D2 /* Post.swift in Sources */,
+				CB2C63362A292CDC00F618E6 /* SelfSizedTableView.swift in Sources */,
 				93B42BFF280DED7D005F6768 /* Coordinator.swift in Sources */,
 				9382B8F828DA4CFB00B39CC8 /* PostCell.swift in Sources */,
+				CB173FD72A2691AA0098AD3A /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

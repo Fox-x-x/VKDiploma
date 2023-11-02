@@ -56,8 +56,8 @@ class PostViewController: UIViewController {
     
     private var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = ColorPalette.thirdColor
-        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.textColor = ColorPalette.fifthColor
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.text = "Котофей Иванович"
         return label
     }()
@@ -109,6 +109,20 @@ class PostViewController: UIViewController {
         return label
     }()
     
+//    private let commentsStackView: UIStackView = {
+//        let sv = UIStackView()
+//        sv.axis = .vertical
+//        sv.distribution = .fill
+//        sv.spacing = 8
+////        sv.backgroundColor = .systemOrange
+//        return sv
+//    }()
+    
+    private let commentsListView: CommentsListView = {
+        let view = CommentsListView()
+        return view
+    }()
+    
     private let postCommentBar: PostCommentBar = {
         let view = PostCommentBar()
 //        view.backgroundColor = ColorPalette.secondaryColor
@@ -139,6 +153,22 @@ class PostViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         setupLayout()
+        setComments()
+    }
+    
+    private func setComments() {
+        var comments: [PostComment] = []
+        
+        comments.append(PostComment(username: "Котофей Иванович", text: "lorem ipsum", date: "19 июля", likesCount: "1"))
+        comments.append(PostComment(username: "Хрен Владимирович", text: "lorem ipsum dolor sit amet, consecteur adsf asdf asf asdg fsadf asdf j;dg fgsdfg sdfgs dsfgsd dsfg", date: "21 авгруста", likesCount: "42"))
+        comments.append(PostComment(username: "Манул", text: "lorem ipsum dolor sit", date: "1 сентября", likesCount: "17"))
+        
+        commentsListView.comments = comments
+        
+//        for comment in comments {
+//            let newCommentView = CommentView(username: comment.0, text: comment.1, date: comment.2)
+//            commentsStackView.addArrangedSubview(newCommentView)
+//        }
     }
     
     private func setupLayout() {
@@ -220,24 +250,26 @@ class PostViewController: UIViewController {
             make.top.equalTo(horizontalSeparator).offset(16)
             make.leading.equalTo(postText.snp.leading)
             make.trailing.equalTo(postText.snp.trailing)
-            make.bottom.lessThanOrEqualToSuperview().offset(-200)
+//            make.bottom.lessThanOrEqualToSuperview().offset(-200)
         }
         
-//        view.addSubview(postCommentBar)
+        contentView.addSubview(commentsListView)
+        commentsListView.snp.makeConstraints { make in
+            make.top.equalTo(commentsCountLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview()
+//            make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-8)
+        }
+        
         postCommentBar.snp.makeConstraints { make in
             make.top.equalTo(scrollView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             
             commentBarNoKeyboardBottomConstraint = make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).constraint
-            
             commentBarWithKeyboardBottomConstraint = make.bottom.equalTo(view.snp.bottom).offset(-keyboardHeight).constraint
-            
-//            make.height.equalTo(44)
         }
         commentBarNoKeyboardBottomConstraint?.activate()
         commentBarWithKeyboardBottomConstraint?.deactivate()
-        
-        
     }
     
     @objc private func onRefreshStart() {
@@ -256,18 +288,13 @@ class PostViewController: UIViewController {
             keyboardHeight = keyboardSize.height
             
             UIView.animate(withDuration: 0.3) {
-                self.postCommentBar.snp.makeConstraints { make in
-                    self.commentBarWithKeyboardBottomConstraint = make.bottom.equalTo(self.view.snp.bottom).offset(-self.keyboardHeight).constraint
-                }
-                
+                self.commentBarWithKeyboardBottomConstraint?.update(offset: -self.keyboardHeight)
                 self.commentBarNoKeyboardBottomConstraint?.deactivate()
                 self.commentBarWithKeyboardBottomConstraint?.activate()
                 self.postCommentBar.layoutIfNeeded()
                 self.view.layoutIfNeeded()
             }
-            
         }
-        
     }
     
     @objc private func keyboardWillHide() {
