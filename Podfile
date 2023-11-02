@@ -6,5 +6,8 @@ target 'Diploma-VK' do
   # Pods for Navigation
   pod 'SnapKit', '~> 5.6.0'
   pod 'SkeletonView'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
 end

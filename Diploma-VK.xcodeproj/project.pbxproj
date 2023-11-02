@@ -43,6 +43,7 @@
 		CB173FD72A2691AA0098AD3A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB173FD62A2691AA0098AD3A /* CommentCell.swift */; };
 		CB1F86A72ACCABB700399502 /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F86A62ACCABB700399502 /* CommentsListView.swift */; };
 		CB2C63362A292CDC00F618E6 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */; };
+		CB47E74A2AF42F5D00641C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB47E7492AF42F5D00641C10 /* GoogleService-Info.plist */; };
 		CB6BBDA82ACF522500981B16 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BBDA72ACF522500981B16 /* PostComment.swift */; };
 		CBCBFF9C2AB785F900D1869E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBFF9B2AB785F900D1869E /* CommentView.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		CB173FD62A2691AA0098AD3A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		CB1F86A62ACCABB700399502 /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
 		CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		CB47E7492AF42F5D00641C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB6BBDA72ACF522500981B16 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		CBCBFF9B2AB785F900D1869E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +226,7 @@
 				9374CDA027F243DE00416D3A /* Helpers */,
 				93EC314227F0E20500EB2178 /* Assets.xcassets */,
 				93EC314427F0E20500EB2178 /* LaunchScreen.storyboard */,
+				CB47E7492AF42F5D00641C10 /* GoogleService-Info.plist */,
 				93EC314727F0E20500EB2178 /* Info.plist */,
 			);
 			path = "Diploma-VK";
@@ -310,6 +313,7 @@
 			files = (
 				93EC314627F0E20500EB2178 /* LaunchScreen.storyboard in Resources */,
 				93EC314327F0E20500EB2178 /* Assets.xcassets in Resources */,
+				CB47E74A2AF42F5D00641C10 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
