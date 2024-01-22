@@ -19,12 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        // login
-//        let loginViewModel = LoginViewModel()
-//        let navController = UINavigationController(rootViewController: LoginView(viewModel: loginViewModel))
-        
-        
-//        let navController = UINavigationController()
         mainCoordinator = AppCoordinator(tabBarController: tabBarController)
         mainCoordinator?.start()
         
@@ -35,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //
 //        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = navController
+//        window?.rootViewController = LoginViewController()
 //        window?.makeKeyAndVisible()
         
         return true

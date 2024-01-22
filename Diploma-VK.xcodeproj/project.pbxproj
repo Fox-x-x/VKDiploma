@@ -44,7 +44,9 @@
 		CB1F86A72ACCABB700399502 /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F86A62ACCABB700399502 /* CommentsListView.swift */; };
 		CB2C63362A292CDC00F618E6 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */; };
 		CB47E74A2AF42F5D00641C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB47E7492AF42F5D00641C10 /* GoogleService-Info.plist */; };
+		CB5A8A3B2B16693B009BF757 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A8A3A2B16693B009BF757 /* LoginViewController.swift */; };
 		CB6BBDA82ACF522500981B16 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6BBDA72ACF522500981B16 /* PostComment.swift */; };
+		CB9E8FFF2B4F1A4800FB3C08 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E8FFE2B4F1A4800FB3C08 /* LoginInspector.swift */; };
 		CBCBFF9C2AB785F900D1869E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCBFF9B2AB785F900D1869E /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +92,9 @@
 		CB1F86A62ACCABB700399502 /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
 		CB2C63352A292CDC00F618E6 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
 		CB47E7492AF42F5D00641C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB5A8A3A2B16693B009BF757 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CB6BBDA72ACF522500981B16 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		CB9E8FFE2B4F1A4800FB3C08 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		CBCBFF9B2AB785F900D1869E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +146,7 @@
 		9393221627F9C6F1000393B0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CB9E8FFE2B4F1A4800FB3C08 /* LoginInspector.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				93A730BF2804B7890022DCB4 /* FeedViewController.swift */,
+				CB5A8A3A2B16693B009BF757 /* LoginViewController.swift */,
 				9310E83329BD092E00D28604 /* PostViewController.swift */,
 				93B42C03280DF343005F6768 /* ProfileViewController.swift */,
 				93CE88EF29B4DD98007A508A /* EditInfoViewController.swift */,
@@ -366,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5A8A3B2B16693B009BF757 /* LoginViewController.swift in Sources */,
 				CB1F86A72ACCABB700399502 /* CommentsListView.swift in Sources */,
 				9396F97228EA1CC0006D00AD /* PostsTableHeaderView.swift in Sources */,
 				93D0F0A12990078C004284C9 /* FollowerProfileHeaderView.swift in Sources */,
@@ -384,6 +391,7 @@
 				93E9A3052811E60D00F9A6C4 /* FlowCoordinator.swift in Sources */,
 				9393221827F9C9CC000393B0 /* Errors.swift in Sources */,
 				93E9A3072811EC0C00F9A6C4 /* FeedCoordinator.swift in Sources */,
+				CB9E8FFF2B4F1A4800FB3C08 /* LoginInspector.swift in Sources */,
 				9310E83429BD092E00D28604 /* PostViewController.swift in Sources */,
 				CBCBFF9C2AB785F900D1869E /* CommentView.swift in Sources */,
 				93400B1D29A12B0B0027C442 /* PhotosTableViewCell.swift in Sources */,

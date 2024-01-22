@@ -23,4 +23,12 @@ class ProfileCoordinator: FlowCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+//    func goToProfile() {
+//        let vc = ProfileViewController()
+//        let loginInspector = LoginInspector()
+//        vc.delegate = loginInspector
+//        vc.flowCoordinator = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
+    
 }
